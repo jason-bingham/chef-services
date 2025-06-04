@@ -2,9 +2,76 @@
 
 body {
   font-family: $ff-base;
-  font-size: fs(400);
   font-weight: $fw-regular;
-  color: clr(neutral, 900);
   line-height: 1.5;
-  background: clr(neutral, 200);
+  background: clr(neutral, 100);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  padding-block: size(64);
+  padding-inline: size(32);
+  width: 100%;
+  position: relative;
+}
+
+.heading {
+  font-size: fs(800);
+  color: clr(primary, 500);
+  font-family: $ff-headings;
+  font-weight: $fw-bold;
+  line-height: 1.1;
+}
+
+.subheading {
+  font-size: fs(600);
+  color: clr(neutral, 400);
+  text-transform: uppercase;
+  margin-block-end: size(32);
+  max-width: 40ch;
+
+  &:is(.underlined) {
+    margin-block-end: 0;
+  }
+}
+
+.heading-secondary {
+  font-size: fs(500);
+  color: clr(neutral, 900);
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: fs(400);
+  color: clr(neutral, 400);
+}
+
+.hero > h1 {
+  font-family: $ff-headings;
+  font-weight: $fw-bold;
+  font-size: fs(900);
+  line-height: 1.1;
+}
+
+[data-color="inverted"] {
+  background-color: clr(neutral, 900);
+
+  & > *,
+  & > * > h2,
+  & > * > h3,
+  & > * > h4,
+  & > * > p,
+  & > * > * > h2,
+  & > * > * > h3,
+  & > * > * > h4,
+  & > * > * > p {
+    color: clr(neutral, 100);
+  }
 }

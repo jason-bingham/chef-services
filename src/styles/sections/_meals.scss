@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+[data-section="meals"] {
+  figure {
+    position: relative;
+    overflow: hidden;
+
+    & figcaption {
+      position: absolute;
+      bottom: -100%;
+      padding: size(20);
+      background-color: rgb(clr(neutral, 900), 0.5);
+      backdrop-filter: blur(5px);
+      transition: 350ms ease-in-out;
+    }
+
+    &:hover figcaption {
+      bottom: -1px;
+    }
+  }
+}

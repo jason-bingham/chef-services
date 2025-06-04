@@ -1,0 +1,13 @@
+.underlined {
+  &::after {
+    --underline-width: 150px; // Adjust as needed for the underline width
+    content: "";
+    display: block;
+    position: relative;
+    left: calc(50% - var(--underline-width) / 2); // Center the underline
+    margin-block: 1.5rem;
+    width: var(--underline-width);
+    height: 1px; // Adjust as needed for the underline thickness
+    background-color: currentColor; // Change to your desired underline color
+  }
+}

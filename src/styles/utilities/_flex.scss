@@ -1,14 +1,24 @@
 @use "../abstracts/" as *;
 
-.flex-group {
+.flex {
   display: flex;
   column-gap: var(--flex-column-gap, $gap-flex-group);
   row-gap: var(--flex-row-gap, calc($gap-flex-group / 2));
-  width: -moz-fit-content;
-  width: fit-content;
+  // width: -moz-fit-content;
+  // width: fit-content;
   flex-wrap: wrap;
 
-  &.mx-auto {
+  &.centered-xy {
     justify-content: center;
+    align-content: center;
+    // width: 100%;
   }
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
 }

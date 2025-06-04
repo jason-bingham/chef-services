@@ -5,6 +5,12 @@
   --max-width: #{$container-max-width};
   width: min(100% - var(--padding), var(--max-width));
   margin-inline: auto;
+
+  &-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .container[data-type="narrow"] {

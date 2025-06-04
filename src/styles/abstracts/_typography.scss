@@ -2,16 +2,26 @@
 
 $ff-sans: "Lato", sans-serif;
 $ff-serif: "Abril Fatface", serif;
+
 $ff-base: $ff-sans;
 $ff-accent: $ff-serif;
 
+$ff-headings: $ff-serif;
+$ff-buttons: $ff-sans;
+.ff-headings {
+  font-family: $ff-headings;
+}
+.ff-buttons {
+  font-family: $ff-buttons;
+}
+
 $font-sizes: (
-  900: clamp(2.5rem, 0.5rem + 7vw, 5rem),
-  800: clamp(1.875rem, 5rem + 10vw, 3.75rem),
-  600: clamp(1.4rem, 0.5rem + 3vw, 1.6875rem),
-  500: 1.3125rem,
-  400: 1.125rem,
-  300: 1rem,
+  900: 80px,
+  800: 60px,
+  600: 27px,
+  500: 21px,
+  400: 18px,
+  300: 16px,
 );
 
 $fw-thin: 200;

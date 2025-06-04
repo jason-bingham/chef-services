@@ -8,15 +8,196 @@
     <script type="module" src="/main.js"></script>
     <link rel="stylesheet" href="/styles/main.scss" />
 
-    <title>Sandlot Template</title>
+    <title>John Wellington | Chef</title>
   </head>
   <body>
-    <h1
-      class="text-center fs-600 fw-bold padding-block-start-48 padding-inline-32"
-    >
-      Sandlot Template
-    </h1>
-    <h2 class="text-center fs-600 margin-block-32">1. `npm install`</h2>
-    <h2 class="text-center fs-600 margin-block-32">2. `npm run dev`</h2>
+    <header class="hero stack flex centered-xy">
+      <h1>Homecooked meals delivered straight to your door</h1>
+      <button class="button upper" data-type="order">place order</button>
+      <button class="button upper" data-type="info">more info</button>
+    </header>
+    <main>
+      <section id="about" style="--gap-grid: 2.5rem">
+        <div class="container even-columns relative" data-type="wide">
+          <div style="height: 1px">
+            /* needed this to prevent the image from pushing the margin down */
+            <img
+              src="/images/about.jpg"
+              alt=""
+              srcset=""
+              class="relative"
+              style="top: -11rem"
+            />
+          </div>
+          <div>
+            <h2 class="heading">Amazing food without the hassle</h2>
+            <h3 class="subheading">
+              we do all the work, so all you have to do is sit back and enjoy
+            </h3>
+            <h4 class="heading-secondary">it's ready to go</h4>
+            <div class="stack" style="--stack-spacer: 1rem">
+              <p>
+                Whether it's for a romantic evening with your significant other
+                or you're hosting a large party and need food for a big group,
+                we're here to help!
+              </p>
+              <p>
+                We can cater to whatever your needs are, and ensure that our
+                delicious food is delivered at the perfect moment, fresh, hot,
+                and ready to eat exactly when you need it to be there.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flex centered-xy bg-neutral-200">
+        <div class="container" data-type="wide">
+          <div
+            class="stack flex flex-column centered-xy"
+            style="--stack-spacer: 1rem"
+          >
+            <h2 class="heading text-center">We make great food</h2>
+            <h3 class="subheading underlined text-center">
+              Cooking is our passion, with quality and freshness being of the
+              utmost importance
+            </h3>
+          </div>
+          <div class="grid-auto-fit">
+            <div>
+              <h4 class="heading-secondary text-center">fresh ingredients</h4>
+              <p class="text-center">
+                We take food seriously, and the first thing to making great food
+                is using fresh ingredients. If the ingredients don't meet our
+                standard, we don't use them.
+              </p>
+            </div>
+            <div>
+              <h4 class="heading-secondary text-center">Professional Chef</h4>
+              <p class="text-center">
+                Chef Wellington is a professionally trained chef who's worked in
+                top kitchens around the world.
+              </p>
+            </div>
+            <div>
+              <h4 class="heading-secondary text-center">Ready for You</h4>
+              <p class="text-center">
+                Stop using services where you have to re-heat your food. We get
+                it to your door ready to eat, without sacrificing any quality at
+                all.
+              </p>
+            </div>
+            <div>
+              <h4 class="heading-secondary text-center">Made with Love</h4>
+              <p class="text-center">
+                Food is our passion, and we infuse that love and passion into
+                every single plate that we make and deliver straight to your
+                home.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-color="inverted" data-section="meals">
+        <div class="container flex centered-xy" data-type="wide">
+          <div class="flex flex-column">
+            <h2 class="heading text-center">Some of our meals</h2>
+            <h3 class="subheading underlined text-center">
+              Here are a few of our delicious, home-cooked meals that are sure
+              to please your taste buds.
+            </h3>
+          </div>
+          <div class="even-columns">
+            <figure>
+              <img src="/images/meal-01.jpg" alt="" />
+              <figcaption data-color="inverted">
+                <h4 class="heading-secondary">Pan-seared salmon and veggies</h4>
+                <p>
+                  A pan-seared salmon filet served on top of a giant bed of
+                  delicious vegetables
+                </p>
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="/images/meal-02.jpg" alt="" />
+              <figcaption data-color="inverted">
+                <h4 class="heading-secondary">Carne asada tacos</h4>
+                <p>
+                  A pan-seared salmon filet served on top of a giant bed of
+                  delicious vegetables
+                </p>
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="/images/meal-03.jpg" alt="" />
+              <figcaption data-color="inverted">
+                <h4 class="heading-secondary">flambéed mussels</h4>
+                <p>
+                  A pan-seared salmon filet served on top of a giant bed of
+                  delicious vegetables
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container flex centered-xy" data-type="wide">
+          <h2 class="heading margin-block-end-48">
+            What our clients are saying about us
+          </h2>
+          <div class="testimonials even-columns">
+            <div class="testimonial">
+              <img src="/images/testimonial-01.jpg" alt="" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolorum officiis reprehenderit possimus earum itaque consectetur
+                natus assumenda deserunt inventore? Quae officia numquam et cum
+                maxime deserunt sapiente magni, nam odio!
+              </p>
+              <div class="testimonial-tag">
+                <h4 class="heading-secondary">John Smith</h4>
+                <p class="text-muted">CEO of Example Corp</p>
+              </div>
+            </div>
+            <div class="testimonial">
+              <img src="/images/testimonial-02.jpg" alt="" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolorum officiis reprehenderit possimus earum itaque consectetur
+                natus assumenda deserunt inventore? Quae officia numquam et cum
+                maxime deserunt sapiente magni, nam odio!
+              </p>
+              <div class="testimonial-tag">
+                <h4 class="heading-secondary">Pippa James</h4>
+                <p class="text-muted">CEO of Example Corp</p>
+              </div>
+            </div>
+            <div class="testimonial">
+              <img src="/images/testimonial-03.jpg" alt="" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolorum officiis reprehenderit possimus earum itaque consectetur
+                natus assumenda deserunt inventore? Quae officia numquam et cum
+                maxime deserunt sapiente magni, nam odio!
+              </p>
+              <div class="testimonial-tag">
+                <h4 class="heading-secondary">Elle Juneau</h4>
+                <p>CEO of Example Corp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer bg-neutral-900 padding-64" data-color="inverted">
+      <div
+        class="container container-centered flex-column stack"
+        style="--stack-spacer: 1rem"
+      >
+        <p>Homecooked meals delivered straight to your door</p>
+        <p>&copy;2022 Personal Chef services</p>
+        <p>5554 Boulevard Anywhere, Montreal, Quebec, J1S 1S9 | 123-555-1234</p>
+      </div>
+    </footer>
   </body>
 </html>
