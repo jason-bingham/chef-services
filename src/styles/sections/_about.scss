@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+@use "sass:map";
+
+#about {
+  @media (max-width: map.get($breakpoints, large)) {
+    .about-image,
+    header {
+      margin: auto;
+    }
+  }
+}
+
+.about-image {
+  @include mq(large) {
+    height: 1px;
+  }
+  //   margin: auto;
+}

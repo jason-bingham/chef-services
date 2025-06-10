@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+@use "sass:map";
+
+$about-breakpoint: map.get($breakpoints, large);
+
+.shift-up {
+  @include mq($about-breakpoint) {
+    transform: translateY(calc($padding-section-block * -1.5));
+  }
+
+  #about:has(&) {
+    // This is a hack to shift the about image up without creating a gap between the image and the text or an extra-large margin at the bottom of the section.
+    @media screen and (max-width: $about-breakpoint) {
+      transform: translateY(calc($padding-section-block * -0.5));
+      padding-bottom: calc($padding-section-block * 0.5);
+      padding-top: 0;
+    }
+  }
+}

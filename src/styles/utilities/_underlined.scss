@@ -1,4 +1,7 @@
-.underlined {
+[data-decoration="true"] {
+  margin-block-end: 0; // Remove bottom margin for underlined elements
+  padding-block-end: 0;
+
   &::after {
     --underline-width: 150px; // Adjust as needed for the underline width
     content: "";

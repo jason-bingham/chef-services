@@ -14,7 +14,7 @@
 }
 
 .container[data-type="narrow"] {
-  --max-width: #{$container-max-width-l};
+  --max-width: #{$container-max-width-s};
 }
 
 .container[data-type="wide"] {

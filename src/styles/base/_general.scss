@@ -15,34 +15,40 @@ main {
 }
 
 section {
-  padding-block: size(64);
-  padding-inline: size(32);
+  padding-block: $padding-section-block;
+  padding-inline: $padding-section-inline;
   width: 100%;
   position: relative;
+}
+
+header {
+  p {
+    max-width: 50ch;
+  }
 }
 
 .heading {
   font-size: fs(800);
   color: clr(primary, 500);
   font-family: $ff-headings;
-  font-weight: $fw-bold;
   line-height: 1.1;
+  padding-block-end: size(16);
 }
 
 .subheading {
-  font-size: fs(600);
+  font-size: fs(500);
   color: clr(neutral, 400);
   text-transform: uppercase;
   margin-block-end: size(32);
-  max-width: 40ch;
+  // max-width: 50ch;
 
-  &:is(.underlined) {
-    margin-block-end: 0;
-  }
+  // &:is(.underlined) {
+  //   margin-block-end: 0;
+  // }
 }
 
 .heading-secondary {
-  font-size: fs(500);
+  font-size: fs(400);
   color: clr(neutral, 900);
   font-weight: $fw-bold;
   text-transform: uppercase;
@@ -53,25 +59,13 @@ p {
   color: clr(neutral, 400);
 }
 
-.hero > h1 {
-  font-family: $ff-headings;
-  font-weight: $fw-bold;
-  font-size: fs(900);
-  line-height: 1.1;
-}
-
 [data-color="inverted"] {
   background-color: clr(neutral, 900);
 
-  & > *,
-  & > * > h2,
-  & > * > h3,
-  & > * > h4,
-  & > * > p,
-  & > * > * > h2,
-  & > * > * > h3,
-  & > * > * > h4,
-  & > * > * > p {
+  & .heading,
+  & .subheading,
+  & .heading-secondary,
+  & p {
     color: clr(neutral, 100);
   }
 }

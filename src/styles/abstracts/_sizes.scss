@@ -10,7 +10,10 @@ $sizes: (
   32: 2rem,
   36: 2.25rem,
   48: 3rem,
-  64: 7rem /* 112px */,
+  64: 4rem,
+  80: 5rem,
+  96: 6rem,
+  112: 7rem,
 );
 
 @function size($size) {
@@ -21,8 +24,10 @@ $sizes: (
   }
 }
 
-$padding-hero: clamp(15rem, 15vh, 20rem);
-$padding-section: clamp(3rem, 10vh, 7rem);
+$padding-logo: clamp(0.5rem, 2vw, 1.5rem);
+$padding-hero: clamp(5rem, 15vw, 20rem);
+$padding-section-block: clamp(3rem, 10vw, 7rem);
+$padding-section-inline: clamp(1.5rem, 0.5rem + 4vw, 3rem);
 $padding-card-body: clamp(2rem, 3vw, 5rem);
 
 $gap-grid: 1.5rem;

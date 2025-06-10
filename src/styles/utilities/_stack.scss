@@ -1,3 +1,4 @@
 .stack > *:not(:first-child) {
-  margin-top: var(--stack-spacer, 2rem);
+  // em for stack spacing allows stack to adapt to different font sizes
+  margin-top: var(--stack-spacer, 2em);
 }

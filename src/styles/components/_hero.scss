@@ -3,7 +3,6 @@
 .hero {
   padding-block: $padding-hero;
   padding-inline: $padding-hero;
-  background-image: url(../../assets/hero-bg.webp);
   color: clr(neutral, 100);
   background-size: cover;
   background-position: center;
@@ -11,7 +10,9 @@
   text-align: center;
   background-image: url(/images/hero-bg.webp);
 
-  h1 {
-    // font-size: fs(900);
+  > h1 {
+    font-family: $ff-headings;
+    font-size: fs(900);
+    line-height: 1.1;
   }
 }

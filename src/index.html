@@ -5,36 +5,65 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <script type="module" src="/main.js"></script>
     <link rel="stylesheet" href="/styles/main.scss" />
 
-    <title>John Wellington | Chef</title>
+    <title>Chef Wellington</title>
   </head>
   <body>
-    <header class="hero stack flex centered-xy">
-      <h1>Homecooked meals delivered straight to your door</h1>
-      <button class="button upper" data-type="order">place order</button>
-      <button class="button upper" data-type="info">more info</button>
+    <header class="primary-header">
+      <img
+        class="logo | mx-auto"
+        src="/images/logo.svg"
+        alt="Chef Wellington's logo"
+      />
+      <nav class="primary-nav | mx-auto">
+        <ul class="container | flex flex-centered-xy">
+          <li><a href="#about">About</a></li>
+          <li><a href="#meals">Meals</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
+      <div
+        class="hero | stack flex flex-centered-xy"
+        style="--stack-spacer: 3rem"
+      >
+        <h1>Homecooked meals delivered straight to your door</h1>
+        <button class="button upper" data-type="order">place order</button>
+        <a href="#about" class="button upper" data-type="info">more info</a>
+      </div>
       <section id="about" style="--gap-grid: 2.5rem">
-        <div class="container even-columns relative" data-type="wide">
-          <div style="height: 1px">
-            /* needed this to prevent the image from pushing the margin down */
-            <img
-              src="/images/about.jpg"
-              alt=""
-              srcset=""
-              class="relative"
-              style="top: -11rem"
-            />
+        <div class="container | even-columns relative" data-type="wide">
+          <div class="about-image">
+            <!-- needed this to prevent the image from pushing the margin down -->
+            <picture>
+              <source srcset="/images/about.avif" type="image/avif" />
+              <source srcset="/images/about.webp" type="image/webp" />
+              <img
+                src="/images/about.jpg"
+                alt="Several plates of food seen from above on a white table, some with figs and basil and others with grapefruit and sliced bananas with a brown sauce on top."
+                class="shift-up box-shadow-1"
+              />
+            </picture>
           </div>
           <div>
-            <h2 class="heading">Amazing food without the hassle</h2>
-            <h3 class="subheading">
-              we do all the work, so all you have to do is sit back and enjoy
-            </h3>
-            <h4 class="heading-secondary">it's ready to go</h4>
+            <header>
+              <h2 class="visually-hidden">About</h2>
+              <p class="heading">Amazing food without the hassle</p>
+              <p class="subheading">
+                we do all the work, so all you have to do is sit back and enjoy
+              </p>
+            </header>
+            <p class="heading-secondary">it's ready to go</p>
             <div class="stack" style="--stack-spacer: 1rem">
               <p>
                 Whether it's for a romantic evening with your significant other
@@ -50,21 +79,20 @@
           </div>
         </div>
       </section>
-      <section class="flex centered-xy bg-neutral-200">
+      <section class="bg-neutral-200">
         <div class="container" data-type="wide">
-          <div
-            class="stack flex flex-column centered-xy"
-            style="--stack-spacer: 1rem"
+          <header
+            class="section-header | flex flex-centered-xy flex-column | mx-auto"
           >
-            <h2 class="heading text-center">We make great food</h2>
-            <h3 class="subheading underlined text-center">
+            <p class="heading text-center">We make great food</p>
+            <p class="subheading text-center" data-decoration="true">
               Cooking is our passion, with quality and freshness being of the
               utmost importance
-            </h3>
-          </div>
+            </p>
+          </header>
           <div class="grid-auto-fit">
             <div>
-              <h4 class="heading-secondary text-center">fresh ingredients</h4>
+              <p class="heading-secondary text-center">fresh ingredients</p>
               <p class="text-center">
                 We take food seriously, and the first thing to making great food
                 is using fresh ingredients. If the ingredients don't meet our
@@ -72,14 +100,14 @@
               </p>
             </div>
             <div>
-              <h4 class="heading-secondary text-center">Professional Chef</h4>
+              <p class="heading-secondary text-center">Professional Chef</p>
               <p class="text-center">
                 Chef Wellington is a professionally trained chef who's worked in
                 top kitchens around the world.
               </p>
             </div>
             <div>
-              <h4 class="heading-secondary text-center">Ready for You</h4>
+              <p class="heading-secondary text-center">Ready for You</p>
               <p class="text-center">
                 Stop using services where you have to re-heat your food. We get
                 it to your door ready to eat, without sacrificing any quality at
@@ -87,7 +115,7 @@
               </p>
             </div>
             <div>
-              <h4 class="heading-secondary text-center">Made with Love</h4>
+              <p class="heading-secondary text-center">Made with Love</p>
               <p class="text-center">
                 Food is our passion, and we infuse that love and passion into
                 every single plate that we make and deliver straight to your
@@ -97,18 +125,25 @@
           </div>
         </div>
       </section>
-      <section data-color="inverted" data-section="meals">
-        <div class="container flex centered-xy" data-type="wide">
+      <section id="meals" data-color="inverted" data-section="meals">
+        <div class="container flex flex-centered-xy" data-type="wide">
           <div class="flex flex-column">
-            <h2 class="heading text-center">Some of our meals</h2>
-            <h3 class="subheading underlined text-center">
-              Here are a few of our delicious, home-cooked meals that are sure
-              to please your taste buds.
-            </h3>
+            <header>
+              <h2 class="visually-hidden">Our Meals</h2>
+              <h3 class="heading text-center">Some of our meals</h3>
+              <p class="subheading text-center" data-decoration="true">
+                Here are a few of our delicious, home-cooked meals that are sure
+                to please your taste buds.
+              </p>
+            </header>
           </div>
           <div class="even-columns">
             <figure>
-              <img src="/images/meal-01.jpg" alt="" />
+              <picture>
+                <source srcset="/images/meal-01.avif" type="image/avif" />
+                <source srcset="/images/meal-01.webp" type="image/webp" />
+                <img src="/images/meal-01.jpg" loading="lazy" alt=""
+              /></picture>
               <figcaption data-color="inverted">
                 <h4 class="heading-secondary">Pan-seared salmon and veggies</h4>
                 <p>
@@ -118,7 +153,11 @@
               </figcaption>
             </figure>
             <figure>
-              <img src="/images/meal-02.jpg" alt="" />
+              <picture>
+                <source srcset="/images/meal-02.avif" type="image/avif" />
+                <source srcset="/images/meal-02.webp" type="image/webp" />
+                <img src="/images/meal-02.jpg" loading="lazy" alt="" />
+              </picture>
               <figcaption data-color="inverted">
                 <h4 class="heading-secondary">Carne asada tacos</h4>
                 <p>
@@ -128,7 +167,11 @@
               </figcaption>
             </figure>
             <figure>
-              <img src="/images/meal-03.jpg" alt="" />
+              <picture>
+                <source srcset="/images/meal-03.avif" type="image/avif" />
+                <source srcset="/images/meal-03.webp" type="image/webp" />
+                <img src="/images/meal-03.jpg" loading="lazy" alt="" />
+              </picture>
               <figcaption data-color="inverted">
                 <h4 class="heading-secondary">flambéed mussels</h4>
                 <p>
@@ -140,19 +183,31 @@
           </div>
         </div>
       </section>
-      <section>
-        <div class="container flex centered-xy" data-type="wide">
-          <h2 class="heading margin-block-end-48">
-            What our clients are saying about us
-          </h2>
+      <section id="testimonials">
+        <div class="container flex flex-centered-xy" data-type="wide">
+          <header>
+            <h2 class="visually-hidden">Testimonials</h2>
+            <p class="heading margin-block-end-48 text-center">
+              What our clients are saying about us
+            </p>
+          </header>
           <div class="testimonials even-columns">
             <div class="testimonial">
-              <img src="/images/testimonial-01.jpg" alt="" />
+              <picture>
+                <source
+                  srcset="/images/testimonial-01.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="/images/testimonial-01.webp"
+                  type="image/webp"
+                />
+                <img src="/images/testimonial-01.jpg" loading="lazy" alt="" />
+              </picture>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Dolorum officiis reprehenderit possimus earum itaque consectetur
-                natus assumenda deserunt inventore? Quae officia numquam et cum
-                maxime deserunt sapiente magni, nam odio!
+                natus assumenda deserunt inventore? Quae officia numquam.
               </p>
               <div class="testimonial-tag">
                 <h4 class="heading-secondary">John Smith</h4>
@@ -160,7 +215,17 @@
               </div>
             </div>
             <div class="testimonial">
-              <img src="/images/testimonial-02.jpg" alt="" />
+              <picture>
+                <source
+                  srcset="/images/testimonial-02.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="/images/testimonial-02.webp"
+                  type="image/webp"
+                />
+                <img src="/images/testimonial-02.jpg" loading="lazy" alt="" />
+              </picture>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Dolorum officiis reprehenderit possimus earum itaque consectetur
@@ -173,12 +238,20 @@
               </div>
             </div>
             <div class="testimonial">
-              <img src="/images/testimonial-03.jpg" alt="" />
+              <picture>
+                <source
+                  srcset="/images/testimonial-03.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="/images/testimonial-03.webp"
+                  type="image/webp"
+                />
+                <img src="/images/testimonial-03.jpg" loading="lazy" alt="" />
+              </picture>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorum officiis reprehenderit possimus earum itaque consectetur
-                natus assumenda deserunt inventore? Quae officia numquam et cum
-                maxime deserunt sapiente magni, nam odio!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                officia numquam et cum maxime deserunt sapiente magni, nam odio!
               </p>
               <div class="testimonial-tag">
                 <h4 class="heading-secondary">Elle Juneau</h4>

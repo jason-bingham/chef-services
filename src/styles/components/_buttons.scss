@@ -25,7 +25,8 @@
     color: clr(neutral, 100);
   }
 
-  &:is(:hover, :focus) {
+  &:hover,
+  &:focus {
     background: clr(neutral, 100);
     color: clr(neutral, 900);
   }

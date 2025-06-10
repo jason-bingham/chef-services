@@ -2,9 +2,27 @@
 
 .testimonial {
   box-shadow: 0 0 12px rgb(clr(neutral, 900), 0.25);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 
   & > p {
     padding: size(48);
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    &:before {
+      content: open-quote;
+      position: absolute;
+      font-family: $ff-headings;
+      font-size: 320px;
+      color: rgb(clr(neutral, 900), 0.1);
+      z-index: -1;
+      line-height: 1;
+      left: 10px;
+      top: -15px;
+    }
   }
 
   &-tag {

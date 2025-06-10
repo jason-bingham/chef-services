@@ -16,12 +16,12 @@ $ff-buttons: $ff-sans;
 }
 
 $font-sizes: (
-  900: 80px,
-  800: 60px,
-  600: 27px,
-  500: 21px,
-  400: 18px,
-  300: 16px,
+  900: clamp(3.0518rem, 2.2834rem + 3.842vw, 5.2609rem),
+  800: clamp(2.4414rem, 1.9178rem + 2.6178vw, 3.9467rem),
+  600: clamp(1.5625rem, 1.3334rem + 1.1454vw, 2.2211rem),
+  500: clamp(1.25rem, 1.1052rem + 0.7239vw, 1.6663rem),
+  400: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem),
+  300: clamp(0.8rem, 0.7521rem + 0.2395vw, 0.9377rem),
 );
 
 $fw-thin: 200;
